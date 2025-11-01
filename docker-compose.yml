@@ -1,0 +1,73 @@
+services:
+  sonarr:
+    image: linuxserver/sonarr
+    container_name: sonarr
+    ports:
+      - 8989:8989
+    volumes:
+      - D:\Docker\sonarr:/config
+      - D:\Media\TV:/tv
+      - D:\Media\Downloads:/downloads
+    restart: unless-stopped
+
+  radarr:
+    image: linuxserver/radarr
+    container_name: radarr
+    ports:
+      - 7878:7878
+    volumes:
+      - D:\Docker\radarr:/config
+      - D:\Media\Movies:/movies
+      - D:\Media\Downloads:/downloads
+    restart: unless-stopped
+
+  prowlarr:
+    image: linuxserver/prowlarr
+    container_name: prowlarr
+    ports:
+      - 9696:9696
+    volumes:
+      - D:\Docker\prowlarr:/config
+    restart: unless-stopped
+
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolverr
+    environment:
+      - LOG_LEVEL=info
+      - LOG_HTML=false
+      - CAPTCHA_SOLVER=none
+      - TZ=Australia/Sydney
+    ports:
+      - 8191:8191
+    restart: unless-stopped
+
+  qbittorrent:
+    image: linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    environment:
+      - PUID=1000            # optional, keeps permissions consistent
+      - PGID=1000
+      - TZ=Australia/Sydney  # change if needed
+      - WEBUI_PORT=8080
+    ports:
+      - 8080:8080
+      - 6881:6881
+      - 6881:6881/udp
+    volumes:
+      - D:\Docker\qbittorrent\config:/config
+      - D:\Media\Downloads:/downloads
+    restart: unless-stopped
+
+  jellyseerr:
+    image: fallenbagel/jellyseerr:latest
+    container_name: jellyseerr
+    environment:
+      - TZ=Australia/Sydney
+      - LOG_LEVEL=info
+    ports:
+      - 5055:5055
+    volumes:
+      - D:\Docker\jellyseerr:/app/config
+    restart: unless-stopped
+
