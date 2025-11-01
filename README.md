@@ -1,11 +1,11 @@
-# 🎬 Media Server Stack
+# Media Server Stack
 
 This repository contains a **Docker Compose** setup for a complete self-hosted media server.  
 It includes everything you need to automate, organize, and stream your movies and TV shows — all in one stack.
 
 ---
 
-## 📦 Services
+## Services
 
 | Service | Description |
 |----------|-------------|
@@ -18,14 +18,14 @@ It includes everything you need to automate, organize, and stream your movies an
 
 ---
 
-## 🧱 Stack Overview
+## Stack Overview
 
 This project uses **Docker Compose** to orchestrate containers.  
 Each service runs independently, connected through a shared Docker network.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - [Docker](https://docs.docker.com/engine/install)
@@ -55,9 +55,9 @@ docker compose up -d
 
 ---
 
-## 🎥 Jellyfin Setup Options
+## Jellyfin Setup Options
 
-### 🐳 Option 1: Run Jellyfin in Docker (Recommended)
+### Option 1: Run Jellyfin in Docker (Recommended)
 ```yaml
   jellyfin:
     image: jellyfin/jellyfin:latest
@@ -78,7 +78,7 @@ docker compose up -d jellyfin
 
 ---
 
-### 💻 Option 2: Run Jellyfin Natively on Windows
+### Option 2: Run Jellyfin Natively on Windows
 1. Download the Windows version from [Jellyfin Downloads](https://jellyfin.org/downloads/).
 2. Install and open Jellyfin.
 3. Point your media libraries to your shared `/media` directory.
@@ -86,7 +86,7 @@ docker compose up -d jellyfin
 
 ---
 
-### 🐧 Option 3: Run Jellyfin Natively on Linux
+### Option 3: Run Jellyfin Natively on Linux
 ```bash
 # Debian / Ubuntu
 curl -s https://repo.jellyfin.org/install-debuntu.sh | sudo bash
@@ -102,7 +102,7 @@ Access Jellyfin at [http://localhost:8096](http://localhost:8096)
 
 ---
 
-## 🧩 Optional Add-ons
+## Optional Add-ons
 
 | Tool | Purpose |
 |------|----------|
@@ -113,7 +113,7 @@ Access Jellyfin at [http://localhost:8096](http://localhost:8096)
 
 ---
 
-## 🧠 Tips
+## Tips
 
 - Use **Tailscale** or **Cloudflare Tunnel** for remote access.
 - Backup `/config` folders regularly.
@@ -127,7 +127,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## ❤️ Credits
+## Credits
 
 - [Sonarr](https://sonarr.tv)
 - [Radarr](https://radarr.video)
