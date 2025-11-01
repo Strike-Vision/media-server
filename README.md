@@ -56,16 +56,12 @@ git clone https://github.com/<your-username>/media-server.git
 cd media-server
 ```
 
-### 2️⃣ Configure environment variables
-- Create a `.env` file if not included.
-- Set paths, ports, and credentials.
-
-### 3️⃣ Start the stack
+### 2️⃣ Start the stack
 ```bash
 docker compose up -d
 ```
 
-### 4️⃣ Access your services
+### 3️⃣ Access your services
 
 | Service | Port | URL |
 |----------|------|-----|
@@ -92,7 +88,7 @@ docker compose up -d
       - ./media:/media
     restart: unless-stopped
 ```
-Warning: Hardware Transcoding does not work on windows with docker, Please install natively for HT.
+Warning: Hardware Transcoding does not work on windows with docker, Please install natively for Hardware Transcoding.
 
 Start Jellyfin:
 ```bash
