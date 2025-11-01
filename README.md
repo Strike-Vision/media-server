@@ -120,13 +120,6 @@ Access Jellyfin at [http://localhost:8096](http://localhost:8096)
 - Monitor disk usage — transcoding can consume a lot of temporary storage.
 
 ---
-
-## 🧾 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## Credits
 
 - [Sonarr](https://sonarr.tv)
