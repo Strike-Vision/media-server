@@ -23,24 +23,6 @@ It includes everything you need to automate, organize, and stream your movies an
 This project uses **Docker Compose** to orchestrate containers.  
 Each service runs independently, connected through a shared Docker network.
 
-### Example Directory Structure
-
-```
-/media-server/
-│
-├── docker-compose.yml
-├── .env
-├── config/
-│   ├── sonarr/
-│   ├── radarr/
-│   ├── prowlarr/
-│   ├── jellyseerr/
-│   └── flaresolverr/
-└── media/
-    ├── movies/
-    └── tv/
-```
-
 ---
 
 ## 🚀 Getting Started
