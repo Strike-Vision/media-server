@@ -92,6 +92,7 @@ docker compose up -d
       - ./media:/media
     restart: unless-stopped
 ```
+Warning: Hardware Transcoding does not work on windows with docker, Please install natively for HT.
 Start Jellyfin:
 ```bash
 docker compose up -d jellyfin
