@@ -37,12 +37,14 @@ git clone https://github.com/<your-username>/media-server.git
 cd media-server
 ```
 
-### 2️⃣ Start the stack
+### 2️⃣ Edit volume paths
+- Change the folder paths in the docker compose to match your desired location for configurations and where your media will be stored
+### 3️⃣ Start the stack
 ```bash
 docker compose up -d
 ```
 
-### 3️⃣ Access your services
+### 4️⃣ Access your services
 
 | Service | Port | URL |
 |----------|------|-----|
