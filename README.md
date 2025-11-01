@@ -46,8 +46,7 @@ Each service runs independently, connected through a shared Docker network.
 ## 🚀 Getting Started
 
 ### Prerequisites
-- [Docker](https://docs.docker.com/get-docker/)
-- [Docker Compose](https://docs.docker.com/compose/)
+- [Docker](https://docs.docker.com/engine/install)
 - Optional: [Tailscale](https://tailscale.com) or a reverse proxy for remote access.
 
 ### 1️⃣ Clone the repository
