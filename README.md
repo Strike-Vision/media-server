@@ -93,6 +93,7 @@ docker compose up -d
     restart: unless-stopped
 ```
 Warning: Hardware Transcoding does not work on windows with docker, Please install natively for HT.
+
 Start Jellyfin:
 ```bash
 docker compose up -d jellyfin
@@ -111,7 +112,7 @@ docker compose up -d jellyfin
 ### 🐧 Option 3: Run Jellyfin Natively on Linux
 ```bash
 # Debian / Ubuntu
-sudo apt install jellyfin
+curl -s https://repo.jellyfin.org/install-debuntu.sh | sudo bash
 
 # Fedora / RHEL
 sudo dnf install jellyfin
@@ -130,7 +131,6 @@ Access Jellyfin at [http://localhost:8096](http://localhost:8096)
 |------|----------|
 | **Bazarr** | Subtitle management for Sonarr/Radarr |
 | **qBittorrent / NZBGet / SABnzbd** | Download clients |
-| **Overseerr / Ombi** | Alternative media request system |
 | **Grafana + Prometheus** | Monitoring and container metrics |
 | **Watchtower** | Automatic container updates |
 
@@ -138,7 +138,7 @@ Access Jellyfin at [http://localhost:8096](http://localhost:8096)
 
 ## 🧠 Tips
 
-- Use **Tailscale**, **Cloudflare Tunnel**, or **Nginx Proxy Manager** for remote access.
+- Use **Tailscale** or **Cloudflare Tunnel** for remote access.
 - Backup `/config` folders regularly.
 - Monitor disk usage — transcoding can consume a lot of temporary storage.
 
